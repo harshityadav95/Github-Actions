@@ -2,7 +2,7 @@ name: Running Scripts
 run-name: Scripts run by ${{ github.actor }} 
 on: [push]
 jobs:
-  check-bats-version:
+  running-bash-scripts:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
