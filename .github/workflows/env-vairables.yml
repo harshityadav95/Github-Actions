@@ -1,5 +1,5 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Setting Env Variables
+run-name: ${{ github.actor }} is setting env variable
 on: [push]
 jobs:
   check-bats-version:
