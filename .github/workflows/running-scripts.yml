@@ -9,5 +9,5 @@ jobs:
       #- run: ./.github/scripts/build.sh
       - run: pwd
       - run: ls  -l
-      - run: build.sh
+      - run: ./build.sh
         shell: bash
