@@ -1,0 +1,9 @@
+name: Running Scripts
+run-name: Scripts run by ${{ github.actor }} 
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run : echo $POSTGRES_PORT
