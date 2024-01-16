@@ -1,0 +1,14 @@
+name: Running Scripts
+run-name: Scripts run by ${{ github.actor }} 
+on: [push]
+jobs:
+  running-bash-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      #- run: ./.github/scripts/build.sh
+      - run: pwd
+      - run: ls  -l
+      - run: chmod +x ./build.sh
+      - run: ./build.sh
+        shell: bash

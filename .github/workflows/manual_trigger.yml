@@ -1,0 +1,17 @@
+name: Manually Triggered Workflow  # Give your workflow a descriptive name
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  manual-job:
+    runs-on: ubuntu-latest  # Specify the virtual environment to run the job on
+
+    steps:
+      - name: Checkout repository  # Check out the repository code
+        uses: actions/checkout@v3
+
+      - name: Run your commands  # Replace this with the commands you want to execute
+        run: |
+          echo "This workflow was manually triggered!"
+          # Add your commands here, e.g., installing dependencies, running tests, etc.

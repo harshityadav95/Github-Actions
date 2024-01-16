@@ -1,0 +1,12 @@
+name: Setting Env Variables
+run-name: ${{ github.actor }} is setting env variable
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+      - run : echo $POSTGRES_PORT

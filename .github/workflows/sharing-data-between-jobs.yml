@@ -1,0 +1,31 @@
+name: Artificat Upload
+run-name: Artifiact Upload by ${{ github.actor }} 
+on: [push]
+jobs:
+  save-artifact-job:
+    runs-on: ubuntu-latest
+    name: Save output
+    steps:
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+          
+
+  download-artifact-job:
+    runs-on: macOS-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+      - name: Print the Download File
+        shell: bash
+        run: |
+          value=`cat output.log`
+          echo The result is $value
+  
