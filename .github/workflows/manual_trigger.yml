@@ -1,7 +1,7 @@
 name: Manually Triggered Workflow  # Give your workflow a descriptive name
 
 on:
-  workflow_dispatch:  # This ensures the workflow runs only when manually triggered
+  workflow_dispatch: 
 
 jobs:
   manual-job:
