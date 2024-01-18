@@ -28,4 +28,13 @@ jobs:
         run: |
           value=`cat output.log`
           echo The result is $value
+
+  test-powershell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: Write-Host "Hello, world!"
+        shell: pwsh
+
   
