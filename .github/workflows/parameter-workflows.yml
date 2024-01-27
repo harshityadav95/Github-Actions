@@ -20,7 +20,7 @@ on:
         description: 'Test scenario tags'
         required: true
         type: string
-      
+# https://docs.github.com/en/enterprise-cloud@latest/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatchinputsinput_idtype      
 
 jobs:
   print-tag:
