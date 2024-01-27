@@ -1,8 +1,9 @@
-name: Running Scripts
-run-name: Scripts run by ${{ github.actor }} 
+name:  Sleepy Workflow  # Give your workflow a descriptive name
+
 on:
   repository_dispatch:
   workflow_dispatch:
+
 jobs:
   running-bash-scripts:
     runs-on: ubuntu-latest
