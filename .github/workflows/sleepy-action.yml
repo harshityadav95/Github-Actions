@@ -1,0 +1,13 @@
+name: Running Scripts
+run-name: Scripts run by ${{ github.actor }} 
+on:
+  repository_dispatch:
+  workflow_dispatch:
+jobs:
+  running-bash-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      #- run: ./.github/scripts/build.sh
+      - run: sleep 30m
+        shell: bash
