@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      logLevel:
+      genderchoice:
         description: 'Gender'
         required: true
         default: 'NA'
