@@ -1,7 +1,12 @@
-run-name:  Run by to @${{ github.actor }}
+run-name:  Run by to [${{ inputs.UUID }}]
 on:
   repository_dispatch:
   workflow_dispatch:
+    inputs:
+      UUID:
+        description: 'Unique ID'
+        required: true
+        type: string
 
 jobs:
   running-bash-scripts:
