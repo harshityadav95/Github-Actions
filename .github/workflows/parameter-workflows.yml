@@ -10,8 +10,8 @@ on:
         default: 'NA'
         type: choice
         options:
-          - Make
-          - Female
+          - male
+          - female
       print_tags:
         description: 'True to print to STDOUT'
         required: true
