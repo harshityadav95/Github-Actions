@@ -1,4 +1,5 @@
-run-name:  Run by to ${{ inputs.UUID }}-${{ inputs.UUID }}-${{ inputs.UUID }}-${{ inputs.UUID }}-${{ inputs.UUID }}
+name: Dynamic Run with UUID
+run-name:  Run by to ${{ inputs.UUID }}
 on:
   repository_dispatch:
   workflow_dispatch:
