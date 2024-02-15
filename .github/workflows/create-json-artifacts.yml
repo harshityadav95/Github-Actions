@@ -1,6 +1,13 @@
-name: Artificat Upload
-run-name: Artifiact Upload by ${{ github.actor }} 
-on: [push]
+name: JSON Arifact Creator
+run-name: Run by to ${{ inputs.UUID }}
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      UUID:
+        description: 'Unique ID'
+        required: true
+        type: string
 jobs:
   save-artifact-job:
     runs-on: ubuntu-latest
@@ -8,11 +15,9 @@ jobs:
     steps:
       - shell: bash
         run: |
-          expr 1 + 1 > output.log
+          curl https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8 > output.json
       - name: Upload output file
         uses: actions/upload-artifact@v3
         with:
-          name: output-log-file
-          path: output.log
-          
-  
+          name: output
+          path: output.json        
