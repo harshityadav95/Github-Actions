@@ -15,9 +15,9 @@ jobs:
     steps:
       - shell: bash
         run: |
-          curl https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8 > output.json
+          curl https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8 > output1.json
       - name: Upload output file
         uses: actions/upload-artifact@v3
         with:
-          name: output
-          path: output.json        
+          name: output2
+          path: output3.json        
